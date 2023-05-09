@@ -4,6 +4,21 @@
     https://codepen.io/jcoulterdesign/pen/ZxXbeP
     https://www.section.io/engineering-education/how-to-insert-3d-objects-into-a-webpage-using-html-and-css/
     https://codepen.io/bennettfeely/pen/qRJOZJ/
+    
+    - Mercury
+        source:	https://sketchfab.com/3d-models/planet-mercury-bfd0a0be72a948989306ab2205146087
+        author:	Topson_Noble (https://sketchfab.com/Topson_Noble)
+    - Venus
+        source:	https://sketchfab.com/3d-models/planet-venus-0ee66cfcebd44c75aa88a57339250e94
+        author:	butcher.cnd (https://sketchfab.com/butcher.cnd)
+    - Earth
+        source:	https://sketchfab.com/3d-models/earth-3684eb40fb7e42208089874e6286b9e9
+        author:	denis_cliofas (https://sketchfab.com/denis_cliofas)
+    - The Restaurant at the End of the Universe
+        source:	https://sketchfab.com/3d-models/the-restaurant-at-the-end-of-the-universe-19a147f19774400fbfdeea1aa76e12fc
+        author:	Binkley-Spacetrucker (https://sketchfab.com/Binkley-Piratepants)
+        license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+        requirements:	Author must be credited. Commercial use is allowed.
 -->
 
 <!DOCTYPE html>
@@ -35,18 +50,43 @@
                         <a href="https://twitter.com/Dathink" target="_blank"><i class="fa fa-twitter icon" aria-hidden="true"></i></a>    
                     </p>
                 </p>
+                <hr>
+                <model-viewer class="satelite" src="_assets/_models/_satelite/scene.gltf" alt="Satelite" auto-rotate ar ios-src="_assets/_models/_satelite/scene.gltf"></model-viewer>
+            </div>
+            <div class="restaurante">
+                <model-viewer src="_assets/_models/_mochileiro/scene.gltf" alt="Restaurante no fim do universo" auto-rotate ar ios-src="_assets/_models/_mochileiro/scene.gltf"></model-viewer>
             </div>
             <div class="sistemaSolar">
-                <div class="sol"></div>
-                <div class="mercurio"></div>
-                <div class="venus"></div>
-                <div class="terra"></div>
-                <div class="marte"></div>
-                <div class="jupiter"></div>
-                <div class="saturno"></div>
-                <div class="urano"></div>
-                <div class="netuno"></div>
-                <div class="plutao"></div>
+                <div class="sol">
+                    <model-viewer src="_assets/_models/_sol/scene.gltf" alt="O Sol" auto-rotate camera-controls ar ios-src="_assets/_models/_sol/scene.gltf"></model-viewer>
+                </div>
+                <div class="mercurio">
+                    <model-viewer src="_assets/_models/_mercurio/scene.gltf" alt="Mercúrio" auto-rotate ar ios-src="_assets/_models/_mercurio/scene.gltf"></model-viewer>
+                </div>
+                <div class="venus">
+                    <model-viewer src="_assets/_models/_venus/scene.gltf" alt="Venus" auto-rotate ar ios-src="_assets/_models/_venus/scene.gltf"></model-viewer>
+                </div>
+                <div class="terra">
+
+                </div>
+                <div class="marte">
+
+                </div>
+                <div class="jupiter">
+
+                </div>
+                <div class="saturno">
+
+                </div>
+                <div class="urano">
+
+                </div>
+                <div class="netuno">
+
+                </div>
+                <div class="plutao">
+
+                </div>
                 <div class="asteroides"></div>
             </div>
         </body>
