@@ -1,0 +1,11 @@
+Model Information:
+* title:	The Restaurant at the End of the Universe
+* source:	https://sketchfab.com/3d-models/the-restaurant-at-the-end-of-the-universe-19a147f19774400fbfdeea1aa76e12fc
+* author:	Binkley-Spacetrucker (https://sketchfab.com/Binkley-Piratepants)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "The Restaurant at the End of the Universe" (https://sketchfab.com/3d-models/the-restaurant-at-the-end-of-the-universe-19a147f19774400fbfdeea1aa76e12fc) by Binkley-Spacetrucker (https://sketchfab.com/Binkley-Piratepants) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
