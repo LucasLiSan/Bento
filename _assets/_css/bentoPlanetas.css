@@ -1,0 +1,33 @@
+.sistemaSolar {
+  transform-style: preserve-3d;
+  pointer-events: none;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.trajetoria {
+  border: 2px dashed #ffffff;
+  position: absolute;
+  border-radius: 3400px;
+  background: none !important;
+  z-index: 2;
+}
+
+.planeta {
+  height: 1200px;
+  width: 1200px;
+  border-radius: 600px;
+  background: #ff0000;
+  transition: transform 2.8s 0.23s cubic-bezier(0.33, 0, 0, 1), opacity 2s 0.8s, box-shadow 0s 0s;
+  background-size: 1140px 910px !important;
+  top: auto;
+  bottom: -920px;
+}/*# sourceMappingURL=bentoPlanetas.css.map */

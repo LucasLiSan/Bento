@@ -1,0 +1,87 @@
+$planetCount: 9;
+$planetSize: 1200px; // Size of each planet
+$planetSpacing: 2300px; // Space between each planet
+$planetTransitionSpeed: 2s;
+$mainPlanetViewAmount: 280; // Less means we see more of the planet at the bottom
+$globalPerspective: 800px;
+$sceneAxisTilt: -20deg;
+$menuSpacing: 14px;
+$traverse: "";
+$traverseTriggers: "";
+
+// Colors
+$mercury:#E8927C;
+$venus: #b45d15;
+$earth: #26daaa;
+$mars: #e55f45;
+$jupiter: #ffa500;
+$saturn: #b29d81;
+$uranus: #8dcdd8;
+$neptune: #4f83e2;
+$pluto: #FF8732;
+
+.sistemaSolar {
+    transform-style: preserve-3d;
+    pointer-events: none;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+* {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+%absPosition {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: auto;
+}
+
+@mixin makePlanet($outer, $inner, $texture) {
+    background: url($texture);
+    box-shadow: 0 (-590px) 150px #000000 inset, 0 0px 130px 40px $inner inset, 0 0px 23px 4px $inner inset, 0 -10px 130px $outer;
+}
+
+.trajetoria {
+    border: 2px dashed #ffffff;
+    position: absolute;
+    border-radius: 3400px;
+    background: none !important;
+    z-index: 2;
+}
+
+@mixin makeTrajetoria($width, $left, $top) {
+    @extend %trajetoria;
+    width: $width;
+    height: $width;
+    left: $left;
+    top: $top;
+}
+
+@mixin makeLua ($left, $top, $scale, $texture) {
+    left: $left;
+    top: $top;
+    transform: scale($scale);
+    background: url($texture);
+    z-index: -1;
+    box-shadow: 0px -30px 30px 10px #000000 inset;
+}
+
+.planeta {
+    height: $planetSize;
+    width: $planetSize;
+    border-radius: $planetSize / 2;
+    background: #ff0000;
+    transition: transform 2.8s .23s cubic-bezier(0.33, 0, 0, 1), opacity 2s .8s, box-shadow 0s 0s;
+    background-size: 1140px 910px !important;
+    top: auto;
+    bottom: - $planetSize + $mainPlanetViewAmount;
+}
