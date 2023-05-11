@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .sistemaSolar {
   transform-style: preserve-3d;
   pointer-events: none;
@@ -11,6 +12,15 @@
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
+}
+
+.absPosition, .trigger {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: auto;
 }
 
 .trajetoria {
@@ -30,4 +40,234 @@
   background-size: 1140px 910px !important;
   top: auto;
   bottom: -920px;
+}
+.planeta .lua {
+  height: 200px;
+  width: 200px;
+  border-radius: 600px;
+  background: #ff0000;
+  position: absolute;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: all 0.6s 0.2s;
+}
+.planeta h2 {
+  font-weight: 100;
+  font-size: 40px;
+  letter-spacing: 5px;
+  margin: 0;
+  position: relative;
+  top: -120px;
+}
+.planeta h3 {
+  font-weight: 100;
+  font-size: 20px;
+  letter-spacing: 5px;
+  color: #fea082;
+  margin: 0;
+  position: relative;
+  top: -120px;
+}
+
+@keyframes planeta {
+  from {
+    background-position-y: 0px;
+  }
+  to {
+    background-position-y: -1000px;
+  }
+}
+.viewPort {
+  position: absolute;
+  transform: rotateX(-20deg);
+  perspective: 800px;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.trigger {
+  width: 220px;
+  height: 220px;
+  border-radius: 550px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  cursor: pointer;
+  z-index: 12;
+  left: 18px;
+  bottom: 282px;
+}
+
+.checkbox {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ffffff;
+  outline: none;
+  border-radius: 20px;
+  left: 43px;
+  z-index: 2;
+}
+.checkbox:checked::before {
+  display: block;
+  width: 6px;
+  height: 6px;
+  background: #ffffff;
+  position: relative;
+  top: 3px;
+  left: 3px;
+  content: "";
+  border-radius: 10px;
+}
+
+body {
+  overflow: hidden;
+  background: #000000;
+  height: 100vh;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+body .logo {
+  color: #ffffff;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 100;
+  letter-spacing: 4px;
+}
+body .logo span {
+  font-size: 12px;
+  color: #f39041;
+  display: block;
+}
+body label {
+  cursor: pointer;
+}
+body label.mercurio > .preview {
+  background: url("https://www.solarsystemscope.com/images/textures/full/2k_makemake_fictional.jpg") !important;
+}
+body label.venus > .preview {
+  background: url("https://nasa3d.arc.nasa.gov/shared_assets/images/ven0aaa2/ven0aaa2-copy-428-321.jpg") !important;
+}
+body label.terra > .preview {
+  background: url("https://img00.deviantart.net/04ef/i/2009/114/3/e/new_earth_texture_map_by_lightondesigns.jpg") !important;
+}
+body label.marte > .preview {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/mars_texture.jpg") !important;
+}
+body label.jupiter > .preview {
+  background: url("https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA07782_hires.jpg") !important;
+}
+body label.saturno > .preview {
+  background: url("https://www.solarsystemscope.com/images/textures/full/2k_saturn.jpg") !important;
+}
+body label.urano > .preview {
+  background: url("https://img00.deviantart.net/957c/i/2017/165/4/9/uranus_texture_map_by_jcpag2010-db7yjwb.png") !important;
+}
+body label.netuno > .preview {
+  background: url("https://img00.deviantart.net/f068/i/2017/165/b/c/neptune_texture_map_by_jcpag2010-dbcjcv5.png") !important;
+}
+body label.plutão > .preview {
+  background: url("https://pre00.deviantart.net/4677/th/pre/f/2015/314/4/e/pluto_map__2015_nov_10__by_snowfall_the_cat-d918tlb.png") !important;
+}
+body label .menu {
+  color: #ffffff;
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  left: 90px;
+  z-index: 2;
+}
+body label .menu:after {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #ffffff;
+  border-radius: 60px;
+  content: "";
+  z-index: 2;
+  position: absolute;
+  top: -4px;
+  left: -4px;
+}
+body label .menu:hover h2, body label .menu:hover h3 {
+  opacity: 1;
+}
+body label .menu.mercurio h2 .pip {
+  background: #E8927C;
+}
+body label .menu.venus h2 .pip {
+  background: #b45d15;
+}
+body label .menu.terra h2 .pip {
+  background: #26daaa;
+}
+body label .menu.marte h2 .pip {
+  background: #e55f45;
+}
+body label .menu.jupiter h2 .pip {
+  background: #ffa500;
+}
+body label .menu.saturno h2 .pip {
+  background: #b29d81;
+}
+body label .menu.urano h2 .pip {
+  background: #8dcdd8;
+}
+body label .menu.netuno h2 .pip {
+  background: #4f83e2;
+}
+body label .menu.plutao h2 .pip {
+  background: #FF8732;
+}
+body label .menu .preview {
+  width: 30px;
+  height: 30px;
+  background: #ffff00;
+  float: left;
+  background-size: auto 100% !important;
+  position: absolute;
+  border-radius: 100px;
+  box-shadow: 0 -13px 10px 2px #000000 inset;
+}
+body label .menu .info {
+  position: relative;
+  left: 50px;
+  top: 1px;
+}
+body label .menu h2, body label .menu h3 {
+  font-size: 11px;
+  opacity: 0.4;
+  margin-bottom: 4px;
+}
+body label .menu h2 {
+  font-size: 11px;
+  opacity: 0.4;
+  margin-bottom: 4px;
+}
+body label .menu h2 .pip {
+  width: 0;
+  height: 9px;
+  background: #fea082;
+  float: left;
+  position: relative;
+  top: 3px;
+  transition: all 0.3s;
+  margin-right: 0px;
+}
+body label .menu h3 {
+  font-size: 8px;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+  opacity: 0.3;
 }/*# sourceMappingURL=bentoPlanetas.css.map */
