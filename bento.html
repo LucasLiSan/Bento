@@ -4,16 +4,6 @@
     https://codepen.io/jcoulterdesign/pen/ZxXbeP
     https://www.section.io/engineering-education/how-to-insert-3d-objects-into-a-webpage-using-html-and-css/
     https://codepen.io/bennettfeely/pen/qRJOZJ/
-    
-    - Mercury
-        source:	https://sketchfab.com/3d-models/planet-mercury-bfd0a0be72a948989306ab2205146087
-        author:	Topson_Noble (https://sketchfab.com/Topson_Noble)
-    - Venus
-        source:	https://sketchfab.com/3d-models/planet-venus-0ee66cfcebd44c75aa88a57339250e94
-        author:	butcher.cnd (https://sketchfab.com/butcher.cnd)
-    - Earth
-        source:	https://sketchfab.com/3d-models/earth-3684eb40fb7e42208089874e6286b9e9
-        author:	denis_cliofas (https://sketchfab.com/denis_cliofas)
     - The Restaurant at the End of the Universe
         source:	https://sketchfab.com/3d-models/the-restaurant-at-the-end-of-the-universe-19a147f19774400fbfdeea1aa76e12fc
         author:	Binkley-Spacetrucker (https://sketchfab.com/Binkley-Piratepants)
@@ -30,7 +20,7 @@
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
             <link rel="stylesheet" href="_assets/_css/bento.css">
-            <script src="_assets/_js/menuBento.js" type="text/javascript"></script>
+            <script src="_assets/_js/modalBento.js" type="text/javascript"></script>
             <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
             <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
             <title>SISTEMA SOLAR DO BENTO</title>
@@ -56,38 +46,68 @@
             <div class="restaurante">
                 <model-viewer src="_assets/_models/_mochileiro/scene.gltf" alt="Restaurante no fim do universo" auto-rotate ar ios-src="_assets/_models/_mochileiro/scene.gltf"></model-viewer>
             </div>
+            <div class="all">
+                <div class="lefter">
+                  <div class="text">Hosting</div>
+                </div>
+                <div class="left">
+                  <div class="text">Web Design</div>
+                </div>
+                <div class="center">
+                  <div class="explainer"><span>Hover me</span></div>
+                  <div class="text">Frontend Development</div>
+                  </div>
+                <div class="right">
+                  <div class="text">Backend Development</div>
+                </div>
+                <div class="righter">
+                  <div class="text">SEO</div>
+                </div>
+            </div>
             <div class="sistemaSolar">
-                <div class="sol">
-                    <model-viewer src="_assets/_models/_sol/scene.gltf" alt="O Sol" auto-rotate camera-controls ar ios-src="_assets/_models/_sol/scene.gltf"></model-viewer>
-                </div>
-                <div class="mercurio">
-                    <model-viewer src="_assets/_models/_mercurio/scene.gltf" alt="Mercúrio" auto-rotate ar ios-src="_assets/_models/_mercurio/scene.gltf"></model-viewer>
-                </div>
+                <div class="sol"><a class="button" href="#sol"></a></div>
+                <div class="mercurio"><a class="button" href="#mercurio"></a></div>
                 <div class="venus">
-                    <model-viewer src="_assets/_models/_venus/scene.gltf" alt="Venus" auto-rotate ar ios-src="_assets/_models/_venus/scene.gltf"></model-viewer>
                 </div>
                 <div class="terra">
-
                 </div>
                 <div class="marte">
-
                 </div>
                 <div class="jupiter">
-
                 </div>
                 <div class="saturno">
-
                 </div>
                 <div class="urano">
-
                 </div>
                 <div class="netuno">
-
                 </div>
                 <div class="plutao">
-
                 </div>
                 <div class="asteroides"></div>
+            </div>
+            <div class="popup" id="sol">
+                <div class="popup-inner">
+                    <div class="popup__photo">
+                        <img src="https://images.unsplash.com/photo-1515224526905-51c7d77c7bb8?ixlib=rb-0.3.5&s=9980646201037d28700d826b1bd096c4&auto=format&fit=crop&w=700&q=80" alt="">
+                    </div>
+                    <div class="popup__text">
+                        <h1>O SOL</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ex velit, viverra non vulputate vitae, blandit vitae nisl. Nullam fermentum orci et erat viverra bibendum. Aliquam sed varius nibh, vitae mattis purus. Mauris elementum sapien non ullamcorper vulputate. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eget felis sit amet eros viverra pulvinar.</p>
+                    </div>
+                    <a class="popup__close" href="#">X</a>
+                </div>
+            </div>
+            <div class="popup" id="mercurio">
+                <div class="popup-inner">
+                    <div class="popup__photo">
+                        <img src="https://images.unsplash.com/photo-1515224526905-51c7d77c7bb8?ixlib=rb-0.3.5&s=9980646201037d28700d826b1bd096c4&auto=format&fit=crop&w=700&q=80" alt="">
+                    </div>
+                    <div class="popup__text">
+                        <h1>Mercurio</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ex velit, viverra non vulputate vitae, blandit vitae nisl. Nullam fermentum orci et erat viverra bibendum. Aliquam sed varius nibh, vitae mattis purus. Mauris elementum sapien non ullamcorper vulputate. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eget felis sit amet eros viverra pulvinar.</p>
+                    </div>
+                    <a class="popup__close" href="#">X</a>
+                </div>
             </div>
         </body>
     </html>

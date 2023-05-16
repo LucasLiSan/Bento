@@ -24,6 +24,7 @@ $saturn-orb : 440px; $saturn-pl: 12px;
 $uranus-orb : 520px; $uranus-pl: 10px;
 $neptune-orb : 630px; $neptune-pl: 10px;
 $pluto-orb : 780px; $pluto-pl: 3px;
+$main-color: #9191E9;
 
 $asteroids-belt-orb : 300px; $asteroids-belt-pl: 210px;
 
@@ -46,6 +47,9 @@ body {
   color: #ffffff;
   background: radial-gradient(ellipse at bottom, #1C2837 0%, #050608 100%);
   background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
@@ -127,12 +131,12 @@ hr {
     border-radius: 100px;
   }
   margin: 0 auto;
-  width: 1920px;
-  height: 1080px;
+  width: 100vw;
+  height: 100vh;
   position: relative;
   div {
     border-radius: 1000px;
-    top: 50%;
+    top: 80%;
     left: 50%;
     position: absolute;
     &:not(.sun) {
@@ -164,7 +168,7 @@ hr {
   background-position: -28px -103px;
   background-size: 175%;
   box-shadow: 0 0 10px 2px rgba(255, 107, 0, 0.4), 0 0 22px 11px rgba(255, 203, 0, 0.13);
-  z-index: 998;
+  z-index: 999;
 }
 
 .sol model-viewer {
@@ -181,14 +185,14 @@ hr {
   margin-top: -$mercury-orb / 2;
   margin-left: -$mercury-orb / 2;
   animation: orb revolution(87.5) linear infinite;
-  z-index: 2;
+  z-index: 998;
   &:before {
     height: $mercury-pl;
     width: $mercury-pl;
     background: #9f5e26;
     margin-top: -$mercury-pl / 2;
     margin-left: -$mercury-pl / 2;
-    z-index: 2;
+    z-index: 998;
   }
 }
 
@@ -418,8 +422,216 @@ hr {
   .descricao {
     width: 100%;
   }
-<<<<<<< HEAD
 }
-=======
+
+.button {
+  text-decoration: none;
+  font-size: .875rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  display: inline-block;
+  border-radius: 1.5rem;
+  background: #fff;
+  color: $main-color;
+  padding: 1rem 2rem;
 }
->>>>>>> 2f3ab44e9ae78532130101104bedbd3276ea0f0f
+
+.popup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, .80);
+  z-index: 2;
+  visibility: hidden;
+  opacity: 0;
+  overflow: hiden;
+  transition: .64s ease-in-out;
+  &-inner {
+    position: relative;
+    bottom: -100vw;
+    right: -100vh;
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+    max-height: 600px;
+    width: 60%;
+    height: 80%;
+    background-color: #fff;
+    transform: rotate(32deg);
+    transition: .64s ease-in-out;
+  }
+  &__photo {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+    img {
+      width: auto;
+      height: 100%;
+    }
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    height: 100%;
+    padding: 4rem;
+    h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      color: #0A0A0A;
+    }
+    p {
+      font-size: .875rem;
+      color: #686868;
+      line-height: 1.5;
+    }
+  }
+  &:target {
+    visibility: visible;
+    opacity: 1;
+    .popup-inner {
+      bottom: 0;
+      right: 0;
+      transform: rotate(0);
+    }
+  }
+  &__close {
+    position: absolute;
+    right: -1rem;
+    top: -1rem;
+    width: 3rem;
+    height: 3rem;
+    font-size: .875rem;
+    font-weight: 300;
+    border-radius: 100%;
+    background-color: #0A0A0A;
+    z-index: 4;
+    color: #fff;
+    line-height: 3rem;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+.all {
+  position: absolute;
+  z-index: 999;
+  bottom: 35%;
+}
+
+.all:hover {
+  perspective: 1000px;
+  transition: all 1.3s ease-in;
+  transform: perspective(10000px) rotateX(0deg);
+  .text {
+    opacity: 1;
+  }
+  & > div {
+    opacity: 1;
+    transition-delay: 0s;
+  }
+  .explainer {
+    opacity: 0;
+  }
+}
+
+.left, .center, .right, .lefter, .righter {
+  width: 200px;
+  height: 150px;
+  transform-style: preserve-3d;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  box-shadow: 0 0 20px 5px rgba(100, 100, 255, .4);
+  opacity: 0;
+  transition: all .3s ease;
+  transition-delay: 1s;
+  position: relative;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #58d;
+  cursor: pointer;
+  background-blend-mode: color-burn;
+  
+  &:hover {
+    box-shadow: 0 0 30px 10px rgba(100, 100, 255, .6);
+  background-color: #ccf;
+  }
+}
+.text {
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all .3s ease;
+  bottom: 0;
+  left: 5px;
+  position: absolute;
+  will-change: transform;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(100, 100, 255, .6)
+}
+.lefter {
+  transform: translateX(-60px) translateZ(-50px) rotateY(-10deg);
+  background-image: url(https://cdn3.iconfinder.com/data/icons/other-icons/48/organization-512.png);
+}
+.left {
+  transform: translateX(-30px) translateZ(-25px) rotateY(-5deg);
+  background-image: url(https://cdn3.iconfinder.com/data/icons/other-icons/48/creative_draw-512.png);
+}
+.center {
+  opacity: 1;
+  background-image: url(https://cdn3.iconfinder.com/data/icons/other-icons/48/app_window-512.png);
+}
+.right {
+  transform: translateX(30px) translateZ(-25px) rotateY(5deg);
+  background-image: url(https://cdn3.iconfinder.com/data/icons/other-icons/48/cloud_weather-512.png);
+}
+.righter {
+  transform: translateX(60px) translateZ(-50px) rotateY(10deg);
+  background-image: url(https://cdn3.iconfinder.com/data/icons/other-icons/48/search-512.png);
+}
+.explainer {
+  font-weight: 300;
+  font-size: 2rem;
+  color: #fff;
+  transition: all .6s ease;
+  width: 100%;
+  height: 100%;
+  background-color: #303050;
+  background-image: radial-gradient(circle at center top, #cce, #33a);
+  border-radius: 10px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, .8);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.ref {
+  background-color: #000;
+  background-image: linear-gradient(to bottom, #d80, #c00);
+  border-radius: 3px;
+  padding: 7px 10px;
+  position: absolute;
+  font-size: 16px;
+  bottom: 10px;
+  right: 10px;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 0 0 3px rgba(0, 0, 0, .4);
+  &::first-letter {
+    font-size: 12px;
+  }
+}
