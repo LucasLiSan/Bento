@@ -78,11 +78,15 @@ a, a:visited {
 
 .descricao {
   padding: 30px;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 25%;
-  z-index: 1;
+  z-index: 998;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
   p {
     position: relative;
     font-size: .9em;
@@ -113,10 +117,11 @@ hr {
 }
 
 .restaurante {
-  position: absolute;
-    width: 30%;
-    height: 30%;
-    top: 42vh;
+  position: fixed;
+  width: 30%;
+  height: 30%;
+  left: 10%;
+  top: 25%;
 }
 
 .sistemaSolar {
@@ -133,7 +138,7 @@ hr {
   margin: 0 auto;
   width: 100vw;
   height: 100vh;
-  position: relative;
+  position: absolute;
   div {
     border-radius: 1000px;
     top: 80%;
@@ -431,9 +436,9 @@ hr {
   text-transform: uppercase;
   display: inline-block;
   border-radius: 1.5rem;
-  background: #fff;
   color: $main-color;
-  padding: 1rem 2rem;
+  width: 100px;
+  height: 100px;
 }
 
 .popup {
@@ -458,20 +463,25 @@ hr {
     display: flex;
     align-items: center;
     max-width: 800px;
-    max-height: 600px;
+    max-height: 1000px;
     width: 60%;
     height: 80%;
     background-color: #fff;
     transform: rotate(32deg);
     transition: .64s ease-in-out;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
   }
   &__photo {
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    width: 40%;
-    height: 100%;
+    width: 100%;
+    height: 60%;
     overflow: hidden;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
     img {
       width: auto;
       height: 100%;
@@ -480,9 +490,9 @@ hr {
   &__text {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: 60%;
-    height: 100%;
+    justify-content: flex-start;
+    width: 100%;
+    height: 40%;
     padding: 4rem;
     h1 {
       font-size: 2rem;
@@ -500,6 +510,7 @@ hr {
   &:target {
     visibility: visible;
     opacity: 1;
+    z-index: 999;
     .popup-inner {
       bottom: 0;
       right: 0;
@@ -526,9 +537,12 @@ hr {
 }
 
 .all {
-  position: absolute;
-  z-index: 999;
-  bottom: 35%;
+  position: relative;
+  z-index: 998;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 .all:hover {
@@ -547,9 +561,10 @@ hr {
   }
 }
 
-.left, .center, .right, .lefter, .righter {
-  width: 200px;
-  height: 150px;
+.left1, .left2, .left3, .left4, .left5, .center, 
+.right1, .right2, .right3, .right4, .right5 {
+  width: 100px;
+  height: 100px;
   transform-style: preserve-3d;
   border-radius: 10px;
   border: 1px solid #fff;
@@ -561,7 +576,6 @@ hr {
   background-position: center center;
   background-size: contain;
   background-repeat: no-repeat;
-  background-color: #58d;
   cursor: pointer;
   background-blend-mode: color-burn;
   
@@ -570,6 +584,12 @@ hr {
   background-color: #ccf;
   }
 }
+
+.left1, .left2, .left3, .left4, .left5,
+.right2, .right3, .right4, .right5 {
+  margin-bottom: 33px;
+}
+
 .text {
   transform: translateY(30px);
   opacity: 0;
@@ -579,31 +599,49 @@ hr {
   position: absolute;
   will-change: transform;
   color: #fff;
-  text-shadow: 0 0 5px rgba(100, 100, 255, .6)
+  text-shadow: 0 0 5px rgba(100, 100, 255, .6);
+  text-align: center;
 }
-.lefter {
-  transform: translateX(-60px) translateZ(-50px) rotateY(-10deg);
-  background-image: url(https://cdn3.iconfinder.com/data/icons/other-icons/48/organization-512.png);
+.left1 {
+  background-image: url(https://assets.stickpng.com/images/580b585b2edbce24c47b2709.png);
 }
-.left {
-  transform: translateX(-30px) translateZ(-25px) rotateY(-5deg);
-  background-image: url(https://cdn3.iconfinder.com/data/icons/other-icons/48/creative_draw-512.png);
+.left2 {
+  background-image: url(https://www.pngmart.com/files/22/Venus-PNG-Picture.png);
+}
+.left3 {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/d5/Terra-_edge_blur.png);
+}
+.left4 {
+  background-image: url(https://assets.stickpng.com/images/580b585b2edbce24c47b270b.png);
+}
+.left5 {
+  background-image: url(https://www.pngmart.com/files/21/Mars-PNG-Photo.png);
 }
 .center {
   opacity: 1;
-  background-image: url(https://cdn3.iconfinder.com/data/icons/other-icons/48/app_window-512.png);
+  background-image: url(https://www.pngplay.com/wp-content/uploads/4/Sun-Transparent-Free-PNG.png);
 }
-.right {
-  transform: translateX(30px) translateZ(-25px) rotateY(5deg);
-  background-image: url(https://cdn3.iconfinder.com/data/icons/other-icons/48/cloud_weather-512.png);
+.right1 {
+  background-image: url(https://static.vecteezy.com/system/resources/previews/020/922/034/original/isolated-realistic-jupiter-illustration-png.png);
 }
-.righter {
-  transform: translateX(60px) translateZ(-50px) rotateY(10deg);
-  background-image: url(https://cdn3.iconfinder.com/data/icons/other-icons/48/search-512.png);
+.right2 {
+  background-image: url(https://assets.stickpng.com/images/580b585b2edbce24c47b270d.png);
 }
+.right3 {
+  background-image: url(https://static.vecteezy.com/system/resources/previews/011/178/729/original/uranus-elements-of-this-image-furnished-by-nasa-free-png.png);
+}
+.right4 {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Neptune_cutout.png/1200px-Neptune_cutout.png);
+}
+.right5 {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/9/94/Pluto-transparent.png);
+}
+
 .explainer {
   font-weight: 300;
-  font-size: 2rem;
+  font-size: 0.8rem;
+  text-align: center;
+  text-transform: uppercase;
   color: #fff;
   transition: all .6s ease;
   width: 100%;
@@ -612,7 +650,6 @@ hr {
   background-image: radial-gradient(circle at center top, #cce, #33a);
   border-radius: 10px;
   text-shadow: 0 0 10px rgba(255, 255, 255, .8);
-  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -634,4 +671,9 @@ hr {
   &::first-letter {
     font-size: 12px;
   }
+}
+
+.planetasDetalhes {
+  width: 100%;
+  height: 100%;
 }

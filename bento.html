@@ -42,57 +42,83 @@
                 </p>
                 <hr>
                 <model-viewer class="satelite" src="_assets/_models/_satelite/scene.gltf" alt="Satelite" auto-rotate ar ios-src="_assets/_models/_satelite/scene.gltf"></model-viewer>
+                <div class="all">
+                    <a class="button" href="#sol">
+                        <div class="center">
+                            <div class="explainer">
+                                <span>Veja os astros.</span>
+                            </div>
+                            <div class="text">Sol</div>
+                        </div>
+                    </a>
+                    <div class="left1">
+                        <a class="button" href="#mercurio"></a>
+                        <div class="text">Mercúrio</div>
+                    </div>
+                    <div class="left2">
+                        <a class="button" href="#venus"></a>
+                        <div class="text">Vênus</div>
+                    </div>
+                    <div class="left3">
+                        <a class="button" href="#terra"></a>
+                        <div class="text">Terra</div>
+                    </div>
+                    <div class="left4">
+                        <a class="button" href="#lua"></a>
+                        <div class="text">Lua</div>
+                    </div>
+                    <div class="left5">
+                        <a class="button" href="#marte"></a>
+                        <div class="text">Marte</div>
+                    </div>
+                    <div class="right1">
+                        <a class="button" href="#jupiter"></a>
+                        <div class="text">Júpiter</div>
+                    </div>
+                    <div class="right2">
+                        <a class="button" href="#saturno"></a>
+                        <div class="text">Saturno</div>
+                    </div>
+                    <div class="right3">
+                        <a class="button" href="#urano"></a>
+                        <div class="text">Urano</div>
+                    </div>
+                    <div class="right4">
+                        <a class="button" href="#netuno"></a>
+                        <div class="text">Netuno</div>
+                    </div>
+                    <div class="right5">
+                        <a class="button" href="#plutao"></a>
+                        <div class="text">Plutão</div>
+                    </div>
+                </div>
             </div>
             <div class="restaurante">
                 <model-viewer src="_assets/_models/_mochileiro/scene.gltf" alt="Restaurante no fim do universo" auto-rotate ar ios-src="_assets/_models/_mochileiro/scene.gltf"></model-viewer>
             </div>
-            <div class="all">
-                <div class="lefter">
-                  <div class="text">Hosting</div>
-                </div>
-                <div class="left">
-                  <div class="text">Web Design</div>
-                </div>
-                <div class="center">
-                  <div class="explainer"><span>Hover me</span></div>
-                  <div class="text">Frontend Development</div>
-                  </div>
-                <div class="right">
-                  <div class="text">Backend Development</div>
-                </div>
-                <div class="righter">
-                  <div class="text">SEO</div>
-                </div>
-            </div>
+            
             <div class="sistemaSolar">
-                <div class="sol"><a class="button" href="#sol"></a></div>
-                <div class="mercurio"><a class="button" href="#mercurio"></a></div>
-                <div class="venus">
-                </div>
-                <div class="terra">
-                </div>
-                <div class="marte">
-                </div>
-                <div class="jupiter">
-                </div>
-                <div class="saturno">
-                </div>
-                <div class="urano">
-                </div>
-                <div class="netuno">
-                </div>
-                <div class="plutao">
-                </div>
+                <div class="sol"></div>
+                <div class="mercurio"></div>
+                <div class="venus"></div>
+                <div class="terra"></div>
+                <div class="marte"></div>
+                <div class="jupiter"></div>
+                <div class="saturno"></div>
+                <div class="urano"></div>
+                <div class="netuno"></div>
+                <div class="plutao"></div>
                 <div class="asteroides"></div>
             </div>
             <div class="popup" id="sol">
                 <div class="popup-inner">
                     <div class="popup__photo">
-                        <img src="https://images.unsplash.com/photo-1515224526905-51c7d77c7bb8?ixlib=rb-0.3.5&s=9980646201037d28700d826b1bd096c4&auto=format&fit=crop&w=700&q=80" alt="">
+                        <model-viewer class="planetasDetalhes" src="_assets/_models/_sol/scene.gltf" alt="Sol" auto-rotate camera-controls ar ios-src="_assets/_models/_sol/scene.gltf"></model-viewer>
                     </div>
                     <div class="popup__text">
                         <h1>O SOL</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ex velit, viverra non vulputate vitae, blandit vitae nisl. Nullam fermentum orci et erat viverra bibendum. Aliquam sed varius nibh, vitae mattis purus. Mauris elementum sapien non ullamcorper vulputate. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eget felis sit amet eros viverra pulvinar.</p>
+                        <p>O Sol é uma estrela com diâmetro de 1 392 700 km, ou seja, 109 vezes maior que o da Terra, com 12 742 km. Isso quer dizer que poderíamos enfileirar 109 planetas Terras ao seu lado. Ele está localizado no centro de nosso sistema planetário, o Sistema Solar. Mas, apesar de ser muito maior do que a Terra, em comparação com outras estrelas, esse astro não é assim tão grande. Uma das maiores estrelas conhecidas, a VY Canis Majoris, é cerca de 2 mil vezes maior do que o Sol. Ele contém quase que a totalidade da massa do sistema solar, cerca de 99,8%. É em virtude de sua massa que os planetas orbitam à sua volta.
+                        O sol não está pegando fogo, sua composição é basicamente hidrogênio e hélio e é justamente a fusão nuclear do hidrogênio a fonte de sua energia, liberada na forma de luz e calor. Ao fundirem seus núcleos, átomos de hidrogênio formam o hélio.</p>
                     </div>
                     <a class="popup__close" href="#">X</a>
                 </div>
@@ -100,11 +126,128 @@
             <div class="popup" id="mercurio">
                 <div class="popup-inner">
                     <div class="popup__photo">
-                        <img src="https://images.unsplash.com/photo-1515224526905-51c7d77c7bb8?ixlib=rb-0.3.5&s=9980646201037d28700d826b1bd096c4&auto=format&fit=crop&w=700&q=80" alt="">
+                        <model-viewer class="planetasDetalhes" src="_assets/_models/_mercurio/scene.gltf" alt="Mercurio" auto-rotate camera-controls ar ios-src="_assets/_models/_mercurio/scene.gltf"></model-viewer>
                     </div>
                     <div class="popup__text">
-                        <h1>Mercurio</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ex velit, viverra non vulputate vitae, blandit vitae nisl. Nullam fermentum orci et erat viverra bibendum. Aliquam sed varius nibh, vitae mattis purus. Mauris elementum sapien non ullamcorper vulputate. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eget felis sit amet eros viverra pulvinar.</p>
+                        <h1>Mercúrio</h1>
+                        <p>Mercúrio é o planeta mais próximo do sol. Como tal, ele circula o sol mais rápido do que todos os outros planetas, e é por isso que os romanos o nomearam em homenagem ao seu deus mensageiro de pés velozes.</p>
+                        <p>Um dia solar (o tempo do meio-dia ao meio-dia na superfície do planeta) em Mercúrio dura o equivalente a 176 dias terrestres, enquanto o dia sideral (o tempo de 1 rotação em relação a um ponto fixo) dura 59 dias terrestres. Mercúrio está quase preso ao Sol e, com o tempo, isso diminuiu a rotação do planeta para quase igualar sua órbita ao redor do Sol. Mercúrio também tem a maior excentricidade orbital de todos os planetas, com sua distância do Sol variando de 46 a 70 milhões de km.</p>
+                    </div>
+                    <a class="popup__close" href="#">X</a>
+                </div>
+            </div>
+            <div class="popup" id="venus">
+                <div class="popup-inner">
+                    <div class="popup__photo">
+                        <model-viewer class="planetasDetalhes" src="_assets/_models/_venus/scene.gltf" alt="Venus" auto-rotate camera-controls ar ios-src="_assets/_models/_mercurio/scene.gltf"></model-viewer>
+                    </div>
+                    <div class="popup__text">
+                        <h1>Vênus</h1>
+                        <p>Vênus, o segundo planeta a partir do sol, recebeu o nome da deusa romana do amor e da beleza. O planeta - o único planeta com o nome de uma mulher - pode ter recebido o nome da mais bela divindade de seu panteão porque brilhava como o mais brilhante dos cinco planetas conhecidos pelos astrônomos antigos.</p>
+                        <p>Leva 243 dias terrestres para girar uma vez em seu eixo (dia sideral). A órbita do planeta ao redor do Sol leva 225 dias terrestres, em comparação com os 365 da Terra. Um dia na superfície de Vênus (dia solar) leva 117 dias terrestres.</p>
+                        <p>Vênus está girando na direção oposta ao Sol, isso também é conhecido como rotação retrógrada. Uma possível razão pode ser uma colisão no passado com um asteróide ou outro objeto que fez com que o planeta alterasse seu caminho rotacional.</p>
+                    </div>
+                    <a class="popup__close" href="#">X</a>
+                </div>
+            </div>
+            <div class="popup" id="terra">
+                <div class="popup-inner">
+                    <div class="popup__photo">
+                        <model-viewer class="planetasDetalhes" src="_assets/_models/_terra/scene.gltf" alt="Terra" auto-rotate camera-controls ar ios-src="_assets/_models/_mercurio/scene.gltf"></model-viewer>
+                    </div>
+                    <div class="popup__text">
+                        <h1>Terra</h1>
+                        <p>A Terra, nosso lar, é o terceiro planeta a partir do sol. É o único planeta conhecido por ter uma atmosfera contendo oxigênio livre, oceanos de água líquida em sua superfície e, é claro, vida. A Terra é o quinto maior dos planetas do sistema solar - menor que os quatro gigantes gasosos, Júpiter, Saturno, Urano e Netuno, mas maior que os outros três planetas rochosos.</p>
+                        <p></p>
+                    </div>
+                    <a class="popup__close" href="#">X</a>
+                </div>
+            </div>
+            <div class="popup" id="lua">
+                <div class="popup-inner">
+                    <div class="popup__photo">
+                        <model-viewer class="planetasDetalhes" src="_assets/_models/_terra/_lua/scene.gltf" alt="Lua" auto-rotate camera-controls ar ios-src="_assets/_models/_mercurio/scene.gltf"></model-viewer>
+                    </div>
+                    <div class="popup__text">
+                        <h1>Lua</h1>
+                        <p>Como uma porcentagem do tamanho do corpo que orbita, a Lua é o maior satélite de qualquer planeta em nosso sistema solar. Em termos reais, porém, é apenas o quinto maior satélite natural.</p>
+                    </div>
+                    <a class="popup__close" href="#">X</a>
+                </div>
+            </div>
+            <div class="popup" id="marte">
+                <div class="popup-inner">
+                    <div class="popup__photo">
+                        <model-viewer class="planetasDetalhes" src="_assets/_models/_marte/scene.gltf" alt="Marte" auto-rotate camera-controls ar ios-src="_assets/_models/_mercurio/scene.gltf"></model-viewer>
+                    </div>
+                    <div class="popup__text">
+                        <h1>Marte</h1>
+                        <p>Marte é o quarto planeta a partir do sol. Adequando-se à cor sangrenta do planeta vermelho, os romanos o batizaram com o nome de seu deus da guerra. Os romanos copiaram os antigos gregos, que também deram ao planeta o nome de seu deus da guerra, Ares. Outras civilizações também costumavam dar nomes aos planetas com base em sua cor - por exemplo, os egípcios o chamavam de "Her Desher", que significa "o vermelho", enquanto os antigos astrônomos chineses o apelidavam de "a estrela do fogo". Marte tem as maiores tempestades de poeira do sistema solar. Elas podem durar meses e cobrir todo o planeta. As estações são extremas porque seu caminho orbital elíptico (oval) ao redor do Sol é mais alongado do que a maioria dos outros planetas do sistema solar.
+                        </p>
+                    </div>
+                    <a class="popup__close" href="#">X</a>
+                </div>
+            </div>
+            <div class="popup" id="jupiter">
+                <div class="popup-inner">
+                    <div class="popup__photo">
+                        <model-viewer class="planetasDetalhes" src="_assets/_models/_jupiter/scene.gltf" alt="Jupiter" auto-rotate camera-controls ar ios-src="_assets/_models/_mercurio/scene.gltf"></model-viewer>
+                    </div>
+                    <div class="popup__text">
+                        <h1>Júpiter</h1>
+                        <p>Júpiter é o maior planeta do sistema solar. Apropriadamente, recebeu o nome do rei dos deuses da mitologia romana. De maneira semelhante, os antigos gregos nomearam o planeta em homenagem a Zeus, o rei do panteão grego.</p>
+                        <p>Júpiter ajudou a revolucionar a maneira como vimos o universo e a nós mesmos em 1610, quando Galileu descobriu as quatro grandes luas de Júpiter - Io, Europa, Ganimedes e Calisto, agora conhecidas como as luas galileanas. Esta foi a primeira vez que corpos celestes foram vistos circulando um objeto diferente da Terra, o maior apoio da visão copernicana de que a Terra não era o centro do universo.</p>
+                    </div>
+                    <a class="popup__close" href="#">X</a>
+                </div>
+            </div>
+            <div class="popup" id="saturno">
+                <div class="popup-inner">
+                    <div class="popup__photo">
+                        <model-viewer class="planetasDetalhes" src="_assets/_models/_saturno/scene.gltf" alt="Saturno" auto-rotate camera-controls ar ios-src="_assets/_models/_mercurio/scene.gltf"></model-viewer>
+                    </div>
+                    <div class="popup__text">
+                        <h1>Saturno</h1>
+                        <p>Saturno é o sexto planeta a partir do sol e o segundo maior planeta do sistema solar. Saturno era o nome romano de Cronos, o senhor dos Titãs na mitologia grega. Saturno é a raiz da palavra inglesa "sábado (saturday)".</p>
+                        <p>Saturno é o planeta mais distante da Terra visível a olho nu, mas é através de um telescópio que as características mais marcantes do planeta podem ser vistas: os anéis de Saturno. Embora os outros gigantes gasosos do sistema solar — Júpiter, Urano e Netuno — também tenham anéis, os de Saturno são sem dúvida os mais extraordinários.</p>
+                    </div>
+                    <a class="popup__close" href="#">X</a>
+                </div>
+            </div>
+            <div class="popup" id="urano">
+                <div class="popup-inner">
+                    <div class="popup__photo">
+                        <model-viewer class="planetasDetalhes" src="_assets/_models/_urano/scene.gltf" alt="Urano" auto-rotate camera-controls ar ios-src="_assets/_models/_mercurio/scene.gltf"></model-viewer>
+                    </div>
+                    <div class="popup__text">
+                        <h1>Urano</h1>
+                        <p>Urano é o sétimo planeta a partir do sol e o primeiro a ser descoberto pelos cientistas. Embora Urano seja visível a olho nu, por muito tempo foi confundido com uma estrela por causa da penumbra e da órbita lenta do planeta. O planeta também é notável por sua inclinação dramática, que faz com que seu eixo aponte quase diretamente para o sol.</p>
+                        <p>O astrônomo britânico William Herschel descobriu Urano acidentalmente em 13 de março de 1781, com seu telescópio enquanto examinava todas as estrelas até aquelas cerca de 10 vezes mais fracas do que podem ser vistas a olho nu. Uma "estrela" parecia diferente, e dentro de um ano Urano mostrou seguir uma órbita planetária.</p>
+                    </div>
+                    <a class="popup__close" href="#">X</a>
+                </div>
+            </div>
+            <div class="popup" id="netuno">
+                <div class="popup-inner">
+                    <div class="popup__photo">
+                        <model-viewer class="planetasDetalhes" src="_assets/_models/_netuno/scene.gltf" alt="Netuno" auto-rotate camera-controls ar ios-src="_assets/_models/_mercurio/scene.gltf"></model-viewer>
+                    </div>
+                    <div class="popup__text">
+                        <h1>Netuno</h1>
+                        <p>Netuno é o oitavo planeta a partir do sol. Foi o primeiro planeta a ter sua existência prevista por cálculos matemáticos antes de ser realmente visto através de um telescópio em 23 de setembro de 1846. Irregularidades na órbita de Urano levaram o astrônomo francês Alexis Bouvard a sugerir que a atração gravitacional de outro corpo celeste poderia Seja responsável. O astrônomo alemão Johann Galle então se baseou em cálculos subsequentes para ajudar a localizar Netuno pelo telescópio. Anteriormente, o astrônomo Galileu Galilei esboçou o planeta, mas ele o confundiu com uma estrela devido ao seu movimento lento. De acordo com todos os outros planetas vistos no céu, este novo mundo recebeu um nome da mitologia grega e romana - Netuno, o deus romano do mar.</p>
+                    </div>
+                    <a class="popup__close" href="#">X</a>
+                </div>
+            </div>
+            <div class="popup" id="plutao">
+                <div class="popup-inner">
+                    <div class="popup__photo">
+                        <model-viewer class="planetasDetalhes" src="_assets/_models/_plutao/scene.gltf" alt="Plutão" auto-rotate camera-controls ar ios-src="_assets/_models/_mercurio/scene.gltf"></model-viewer>
+                    </div>
+                    <div class="popup__text">
+                        <h1>Plutão - O planeta anão.</h1>
+                        <p>Plutão, outrora considerado o nono e mais distante planeta do sol, é agora o maior planeta anão conhecido no sistema solar. É também um dos maiores membros conhecidos do Cinturão de Kuiper, uma zona sombria além da órbita de Netuno que se acredita ser habitada por centenas de milhares de corpos rochosos e gelados, cada um com mais de 100 quilômetros de diâmetro, juntamente com 1 trilhão de, ou mais, cometas.</p>
+                        <p>Plutão tem cinco luas conhecidas. As luas são Caronte (descoberta em 1978), Hidra e Nix (ambas descobertas em 2005), Kerberos originalmente P4 (descoberta em 2011) e Styx originalmente P5 (descoberta em 2012).</p>
                     </div>
                     <a class="popup__close" href="#">X</a>
                 </div>
